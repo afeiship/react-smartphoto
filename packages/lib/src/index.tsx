@@ -1,18 +1,9 @@
 import React from 'react';
 import ReactList from '@jswork/react-list';
-import SmartPhoto from 'smartphoto';
+import SmartPhoto, { SmartPhotoOption } from 'smartphoto';
 import clsx from 'classnames';
 
 const CLASS_NAME = 'react-smartphoto';
-
-interface SmartphotoOptions {
-  arrows?: boolean;
-  nav?: boolean;
-  useOrientationApi?: boolean;
-  resizeStyle?: 'fill' | 'fit';
-  animationSpeed?: number;
-  forceInterval?: number;
-}
 
 interface TemplateProps {
   (inEvent: { item: any; index: number; items: any[] }): React.ReactNode;
@@ -24,16 +15,17 @@ export interface ReactSmartphotoProps {
   template?: TemplateProps;
   as?: React.ElementType;
   asProps?: any;
-  options?: SmartphotoOptions;
+  options?: SmartPhotoOption;
 }
 
 export default class ReactSmartphoto extends React.Component<ReactSmartphotoProps> {
   static displayName = CLASS_NAME;
-  private smartphoto: SmartPhoto;
+  private smartphoto: SmartPhoto | null = null;
 
   componentDidMount() {
     const { options } = this.props;
     this.smartphoto = new SmartPhoto(`.${CLASS_NAME}__item`, options);
+    console.log(this.smartphoto);
   }
 
   template = ({ item, index }) => {
