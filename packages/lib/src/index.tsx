@@ -11,12 +11,10 @@ export interface ReactSmartphotoProps extends ReactListProps {
 
 export default class ReactSmartphoto extends React.Component<ReactSmartphotoProps> {
   static displayName = CLASS_NAME;
-  private smartphoto: SmartPhoto | null = null;
 
   componentDidMount() {
     const { options } = this.props;
-    this.smartphoto = new SmartPhoto(`.${CLASS_NAME}__item`, options);
-    console.log(this.smartphoto);
+    new SmartPhoto(`.${CLASS_NAME}__item`, options);
   }
 
   template = ({ item, index }) => {
