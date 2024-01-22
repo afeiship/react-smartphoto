@@ -1,3 +1,26 @@
+@import 'smartphoto/css/smartphoto.css';
+
 .react-smartphoto {
-  color: red;
+  --smartphoto-theme-color: #fff;
+  --smartphoto-theme-border-color: #ccc;
+  --smartphoto-gap: 10px;
+  --smartphoto-width: 100px;
+  --smartphoto-height: 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--smartphoto-gap);
+
+  &__item {
+    border: 1px solid var(--smartphoto-theme-border-color);
+    padding: 2px;
+    display: inline-block;
+    width: var(--smartphoto-width);
+    height: var(--smartphoto-height);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
