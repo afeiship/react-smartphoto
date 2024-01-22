@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup",
+    "type-check": "tsc --noEmit",
     "postbuild": "postsass -s src/style.scss -d dist/style.css -c",
     "release": "release-it --ci --npm.skipChecks"
   },
@@ -31,11 +32,5 @@
     "@jswork/react-list": "^1.2.2",
     "smartphoto": "^1.6.5"
   },
-  "keywords": [
-    "gallery",
-    "image",
-    "lightbox",
-    "preview",
-    "smartphoto"
-  ]
+  "keywords": ["gallery", "image", "lightbox", "preview", "smartphoto"]
 }

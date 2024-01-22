@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <h1>react-smartphoto</h1>
-      <TheComponent items={items}>Click me</TheComponent>
+      <TheComponent items={items} />
     </>
   );
 }
