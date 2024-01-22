@@ -1,20 +1,11 @@
 import React from 'react';
-import ReactList from '@jswork/react-list';
+import ReactList, { ReactListProps } from '@jswork/react-list';
 import SmartPhoto, { SmartPhotoOption } from 'smartphoto';
 import clsx from 'classnames';
 
 const CLASS_NAME = 'react-smartphoto';
 
-interface TemplateProps {
-  (inEvent: { item: any; index: number; items: any[] }): React.ReactNode;
-}
-
-export interface ReactSmartphotoProps {
-  className?: string;
-  items: any[];
-  template?: TemplateProps;
-  as?: React.ElementType;
-  asProps?: any;
+export interface ReactSmartphotoProps extends ReactListProps {
   options?: SmartPhotoOption;
 }
 
