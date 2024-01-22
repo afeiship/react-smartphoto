@@ -1,7 +1,7 @@
 {
   "name": "@jswork/react-smartphoto",
   "description": "smartphoto for react.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -32,5 +32,11 @@
     "@jswork/react-list": "^1.2.2",
     "smartphoto": "^1.6.5"
   },
-  "keywords": ["gallery", "image", "lightbox", "preview", "smartphoto"]
+  "keywords": [
+    "gallery",
+    "image",
+    "lightbox",
+    "preview",
+    "smartphoto"
+  ]
 }
